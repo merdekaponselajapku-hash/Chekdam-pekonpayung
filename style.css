@@ -1,0 +1,351 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  color:#333;
+  background:#f5f7f5;
+  line-height:1.6;
+}
+
+/* =========================
+ NAVBAR
+========================= */
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(0,0,0,.6);
+  backdrop-filter:blur(8px);
+  z-index:999;
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 30px;
+}
+
+.logo{
+  color:white;
+  font-size:24px;
+  font-weight:700;
+}
+
+.menu{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:.3s;
+}
+
+.menu a:hover{
+  color:#90ee90;
+}
+
+/* =========================
+ HERO
+========================= */
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+  url("poto bunga.jpeg");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+
+.hero-content{
+  max-width:700px;
+}
+
+.hero h1{
+  font-size:58px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:35px;
+}
+
+.btn{
+
+display:inline-block;
+
+padding:14px 34px;
+
+background:#2e8b57;
+
+color:white;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#1e6d43;
+
+transform:translateY(-3px);
+
+}
+
+/* =========================
+SECTION
+========================= */
+
+.section{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:90px 25px;
+
+}
+
+.section h2{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:25px;
+
+color:#2e8b57;
+
+}
+
+.about-text{
+
+max-width:800px;
+
+margin:0 auto;
+
+text-align:justify;
+
+line-height:1.8;
+
+font-size:16px;
+
+color:#333;
+
+}
+
+.about-text p{
+
+margin-bottom:18px;
+
+}
+
+/* =========================
+CARDS
+========================= */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+color:#2e8b57;
+
+}
+
+/* =========================
+GALERI
+========================= */
+
+.gallery{
+  max-width:1200px;
+  margin:0 auto;
+  padding:90px 25px;
+}
+
+.gallery h2{
+  text-align:center;
+  font-size:38px;
+  margin-bottom:15px;
+  color:#2e8b57;
+}
+
+.gallery > p{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  justify-items:center;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+.gallery-item{
+  width:100%;
+  max-width:320px;
+  text-align:center;
+}
+
+.gallery-item img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:15px;
+  transition:.4s;
+  cursor:pointer;
+}
+
+.gallery-item img:hover{
+  transform:scale(1.05);
+}
+
+.gallery-item h3{
+  margin-top:12px;
+  color:#2e8b57;
+  font-size:18px;
+}
+
+/* =========================
+MAP
+========================= */
+
+iframe{
+
+width:100%;
+
+height:450px;
+
+border:none;
+
+border-radius:18px;
+
+margin-top:30px;
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+background:#14532d;
+
+color:white;
+
+text-align:center;
+
+padding:30px;
+
+margin-top:50px;
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.menu{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.section{
+
+padding:70px 20px;
+
+}
+
+}
