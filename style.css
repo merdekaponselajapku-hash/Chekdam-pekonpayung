@@ -21,12 +21,19 @@ body{
 ========================= */
 
 header{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(0,0,0,.6);
-  backdrop-filter:blur(8px);
-  z-index:999;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(12px);
+    transition:.35s;
+    z-index:999;
+}
+
+header.scrolled{
+    background:#111;
+    box-shadow:0 8px 30px rgba(0,0,0,.3);
 }
 
 .navbar{
@@ -73,6 +80,7 @@ header{
 
   background-size:cover;
   background-position:center;
+  background-attachment:fixed;
 
   display:flex;
   align-items:center;
@@ -83,12 +91,13 @@ header{
 }
 
 .hero-content{
-  max-width:700px;
+  max-width:750px;
 }
 
 .hero h1{
-  font-size:58px;
+  font-size:64px;
   margin-bottom:20px;
+  line-height:1.2;
 }
 
 .hero p{
@@ -97,31 +106,20 @@ header{
 }
 
 .btn{
-
-display:inline-block;
-
-padding:14px 34px;
-
-background:#2e8b57;
-
-color:white;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-transition:.3s;
-
+    display:inline-block;
+    padding:15px 38px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#2e8b57,#3cb371);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(46,139,87,.3);
+    transition:.35s;
 }
 
 .btn:hover{
-
-background:#1e6d43;
-
-transform:translateY(-3px);
-
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(46,139,87,.45);
 }
 
 /* =========================
@@ -134,7 +132,7 @@ max-width:1200px;
 
 margin:auto;
 
-padding:90px 25px;
+padding:120px 30px;
 
 }
 
@@ -152,23 +150,23 @@ color:#2e8b57;
 
 .about-text{
 
-max-width:800px;
+max-width:850px;
 
-margin:0 auto;
+margin:40px auto 0;
 
 text-align:justify;
 
-line-height:1.8;
+line-height:2;
 
-font-size:16px;
+font-size:18px;
 
-color:#333;
+color:#444;
 
 }
 
 .about-text p{
 
-margin-bottom:18px;
+margin-bottom:25px;
 
 }
 
@@ -186,6 +184,7 @@ gap:25px;
 
 margin-top:40px;
 
+
 }
 
 .card{
@@ -200,11 +199,15 @@ box-shadow:0 10px 25px rgba(0,0,0,.1);
 
 transition:.3s;
 
+overflow:hidden;
+
 }
 
 .card:hover{
 
-transform:translateY(-8px);
+transform:translateY(-10px);
+box-shadow:0 20px 40px
+rgba(0,0,0,.15);
 
 }
 
@@ -251,6 +254,8 @@ GALERI
   width:100%;
   max-width:320px;
   text-align:center;
+  overflow:hidden;
+  border-radius:18px
 }
 
 .gallery-item img{
@@ -263,7 +268,7 @@ GALERI
 }
 
 .gallery-item img:hover{
-  transform:scale(1.05);
+  transform:scale(1.08);
 }
 
 .gallery-item h3{
@@ -302,9 +307,9 @@ color:white;
 
 text-align:center;
 
-padding:30px;
+padding:50px 20px;
 
-margin-top:50px;
+margin-top:80px;
 
 }
 
@@ -348,4 +353,41 @@ padding:70px 20px;
 
 }
 
+} /* <- selesai media
+
+/* =========================
+Animasi Scroll
+========================= */
+
+.hidden{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .9s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+Menu Aktif
+========================= */
+
+.menu a.active{
+    color:#7CFC00;
+}
+
+.menu a::after{
+    content:"";
+    display:block;
+    width:0;
+    height:2px;
+    background:#7CFC00;
+    transition:.3s;
+}
+
+.menu a:hover::after,
+.menu a.active::after{
+    width:100%;
 }
